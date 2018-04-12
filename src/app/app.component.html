@@ -1,0 +1,20 @@
+<table class="table-users">
+    <tr class="head-table-users">
+        <th class="head-table-cell">Name</th>
+        <th class="head-table-cell">Gender</th>
+        <th class="head-table-cell">Phone</th>
+        <th class="head-table-cell">Email</th>
+        <th class="head-table-cell">Login</th>
+        <th class="head-table-cell">Registered</th>
+        <th class="head-table-cell">City</th>
+    </tr>
+    <tr *ngFor="let user of usersList">
+        <td class="table-cell">{{user.name.first}} {{user.name.last}}</td>
+        <td class="table-cell">{{user.gender}}</td>
+        <td class="table-cell">{{user.phone}}</td>
+        <td class="table-cell">{{user.email}}</td>
+        <td class="table-cell">{{user.login.username}}</td>
+        <td class="table-cell">{{user.registered}}</td>
+        <td class="table-cell">{{user.location.city}}</td>
+    </tr>
+</table>
