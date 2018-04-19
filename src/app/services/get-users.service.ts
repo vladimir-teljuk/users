@@ -1,16 +1,14 @@
-import {Injectable} from '@angular/core';
-import axios from 'axios';
+import { Injectable } from '@angular/core';
+import axios, { AxiosPromise } from 'axios';
 
 @Injectable()
 export class GetUsersService {
-
-    constructor() {
+    public constructor() {
 
     }
 
-    public getUsers( count: number) {
-        return axios.get('https://randomuser.me/api/?results=' + count.toString());
-
+    public getUsers(count: number): AxiosPromise {
+        return axios.get(`https://randomuser.me/api/?results=${count}`);
     }
 
 }

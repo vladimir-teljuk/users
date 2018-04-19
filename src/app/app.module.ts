@@ -1,9 +1,9 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
 
-import {AppComponent} from './app.component';
-import {GetUsersService} from './services/get-users.service';
+import { AppComponent } from './app.component';
+import { GetUsersService } from './services/get-users.service';
 
 
 @NgModule({
@@ -14,9 +14,8 @@ import {GetUsersService} from './services/get-users.service';
         BrowserModule,
     ],
     providers: [
-        GetUsersService
+        GetUsersService,
     ],
     bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule { }
