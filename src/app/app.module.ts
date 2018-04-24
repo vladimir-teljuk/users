@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 import { GetUsersService } from './services/get-users.service';
 
 
@@ -12,6 +13,7 @@ import { GetUsersService } from './services/get-users.service';
     ],
     imports: [
         BrowserModule,
+        HttpClientModule,
     ],
     providers: [
         GetUsersService,
