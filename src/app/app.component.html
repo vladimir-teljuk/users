@@ -1,12 +1,8 @@
 <table class="table-users">
     <tr class="head-table-users">
-        <th class="head-table-cell">Name</th>
-        <th class="head-table-cell">Gender</th>
-        <th class="head-table-cell">Phone</th>
-        <th class="head-table-cell">Email</th>
-        <th class="head-table-cell">Username</th>
-        <th class="head-table-cell">Registered</th>
-        <th class="head-table-cell">City</th>
+        <th class="head-table-cell" *ngFor="let columnName of columnNames"
+            (click)="sortColumn(columnName.toLowerCase())">{{columnName}}
+            <span *ngFor="let trueSort of isTrueSort">{{trueSort}}</span></th>
     </tr>
     <tr *ngFor="let user of usersList">
         <td class="table-cell">{{user.name}}</td>
