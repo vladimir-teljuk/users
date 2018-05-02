@@ -1,8 +1,8 @@
 <table class="table-users">
     <tr class="head-table-users">
-        <th class="head-table-cell" *ngFor="let columnName of columnNames"
+        <th class="head-table-cell" *ngFor="let columnName of columnNames; let i = index"
             (click)="sortColumn(columnName.toLowerCase())">{{columnName}}
-            <span *ngFor="let trueSort of isTrueSort">{{trueSort}}</span></th>
+            <span>{{isTrueSort[i]}}</span></th>
     </tr>
     <tr *ngFor="let user of usersList">
         <td class="table-cell">{{user.name}}</td>
